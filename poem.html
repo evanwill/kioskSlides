@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html oncontextmenu='return false;'>
+<head>
+	<meta charset="UTF-8">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+		<title>Vandal Poem of the Day</title>
+
+		<link rel="stylesheet" type="text/css" href="styles/fonts.css" >
+		<!-- had issues with media queries in CSS not printing correctly, works with two seporate css and media query here -->
+		<link rel="stylesheet" type="text/css" href="styles/poemStyle.css" >
+		<link rel="stylesheet" type="text/css" media="print" href="styles/print.css" >
+		<link rel="stylesheet" href="styles/font-awesome-4.5.0/css/font-awesome.min.css">
+
+		<script src="js/advance.js"></script>		
+		<!-- activeWait() resets advance timer if mouse is moved to allow visitors to read the poem display -->
+		<script>
+			activeWait();
+		</script>
+		
+		<style>
+			.allPoems { display: none; }
+		</style>
+
+</head>
+
+<body onclick="window.print()">
+
+	<div class="noprint" id="qrCode">
+		<img src="images/vbotClickPrint2.png" class="noprint" style="width:300px;">
+		<div id="printIcon"><i class="fa fa-print"></i></div>
+	</div>
+
+	<div class="noprint" id="header">
+		<img src="images/vpodLogo.png">
+
+		<!-- little script to add the date -->
+		<p id="date1"></p>
+		<script src="js/strftime-min.js"></script>
+		<script>
+		var d = strftime('%B %d, %Y');
+		document.getElementById("date1").innerHTML = d;
+		</script>
+	</div>
+
+	<div id="box">
+		<div id="poem">
+
+			<!-- all the poetry content goes in here, each poem in a div of class "allPoems" with ID of its assigned date.  All are display: none; except for the current day, revealed by js below -->
+
+			<div class="allPoems" id="yyyy-mm-dd">
+
+			<h2 id="title">Title</h2>
+			<p class="line"><em>by <a href="authorProfile">author</a></em></p>
+			<p></p>
+			<p></p>
+			<p class="line">lines</p>
+			<p class="line bookinfo">from <em><a target="_blank" href="">Book</a></em></p><p class="citation">Copyright<br/>Used with the permission of The Permissions Company, Inc.<br/>on behalf of <a href="">Publisher</a>.</p>
+
+			</div>
+
+			<!-- footer for printed poem -->
+			<div id="printQR">
+			<p>poetry.lib.uidaho.edu</p>
+			<img src="images/printerQRbk.png" width="50%">
+			</div>
+
+		</div>
+	</div>
+
+	<script>
+		var currentTime = new Date()
+		var today = currentTime.getFullYear() + "-" + (currentTime.getMonth() + 1)  + "-" + currentTime.getDate()
+
+		document.getElementById(today).style.display="block";
+	</script>
+
+</body>
+</html>

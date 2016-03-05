@@ -1,0 +1,102 @@
+html {   cursor: none; width: 100%; height: 100%;}
+body{ 
+max-width: 1500px;
+margin: 0 auto;
+box-sizing: border-box;
+display: block;
+font-family: "Noto Sans", sans-serif;
+line-height: 1.5;
+font-weight: 400;
+color: #666666;
+background: white;
+}
+div#qrCode {
+position:relative;
+float: right;
+margin-top: 3em;
+}
+div#printIcon {
+	font-size: 90px; position:absolute; right:60px; bottom:0;
+	color: #b18e5f;
+	animation: neonSilver 1.5s ease-in-out infinite alternate;
+}
+@keyframes neonSilver {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #9f9d9d, 0 0 70px #9f9d9d, 0 0 80px #9f9d9d, 0 0 100px #9f9d9d, 0 0 150px #9f9d9d;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #9f9d9d, 0 0 35px #9f9d9d, 0 0 40px #9f9d9d, 0 0 50px #9f9d9d, 0 0 75px #9f9d9d;
+  }
+}
+div#printQR {
+display:none;
+}
+div#printPromo {
+display:none;
+}
+div#box {
+padding: 0 25%;
+margin: 0 auto;
+}
+div#poem {
+margin: 3em auto 6em;
+max-width: 900px;
+}
+div#header{
+border-bottom: 1px solid #D4D4D4;
+padding: 1.5em 10%;
+position: relative;
+margin-bottom: 1.5em;
+margin-top: 1.5em;
+z-index:-1;
+}
+p#date1 {
+display: inline-block;
+vertical-align: top;
+margin-top: 3em;
+margin-left: 3em;
+}
+h2#title {
+text-align: left;
+font-size: 2.5em;
+color: #1A1A1A;
+}
+.line{  
+text-indent: -32px;
+margin: 0 0 0 32px;
+padding-right: 16px;
+line-height:28px;
+}
+.indentedline{
+text-indent: -32px;
+margin: 0 0 0 32px;
+padding-right: 16px;
+line-height:28px;
+padding-left:4em;
+}
+.bookinfo{
+padding-top:40px;
+}
+.citation{
+font-size:11px; 
+padding-top:20px;
+}
+a {
+color: #1A1A1A;
+}
+.em1{padding-left:1em;}
+.em2{padding-left:2em;}
+.em3{padding-left:3em;}
+.em4{padding-left:4em;}
+.em5{padding-left:5em;}
+.em6{padding-left:6em;}
+.em7{padding-left:7em;}
+.em8{padding-left:8em;}
+.em9{padding-left:9em;}
+.em10{padding-left:10em;}
+.em11{padding-left:11em;}
+.em12{padding-left:12em;}
+.em13{padding-left:13em;}
+.em14{padding-left:14em;}
+.em15{padding-left:15em;}
+.em16{padding-left:16em;}

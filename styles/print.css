@@ -1,0 +1,63 @@
+.noprint {
+	display: none;
+	}
+body {
+	margin: 0 2em 5em; 
+	padding: 0;
+	font-size: .75em;
+}
+div#box {
+padding: 0;
+margin: 0;
+}
+div#poem {
+margin: 3em 0 6em;
+max-width: 1900px;
+}
+h2#title {
+text-align: left;
+font-size: 1.05em;
+color: #1A1A1A;
+}
+div#printQR {
+display:initial;
+}
+div#printPromo {
+display:initial;
+}
+.line{  
+text-indent: -1.25em;
+margin: 0 0 0 1.25em;
+line-height:normal;
+}
+.indentedline{
+line-height:normal;
+padding-left:1.25em;
+}
+.bookinfo{
+font-size:.65em; 
+padding-top:1.25em;
+}
+.citation{
+font-size:.65em; 
+padding-top:.5em;
+}
+a {
+color: #1A1A1A;
+}
+.em1{padding-left:1em;}
+.em2{padding-left:2em;}
+.em3{padding-left:3em;}
+.em4{padding-left:4em;}
+.em5{padding-left:5em;}
+.em6{padding-left:6em;}
+.em7{padding-left:7em;}
+.em8{padding-left:8em;}
+.em9{padding-left:9em;}
+.em10{padding-left:10em;}
+.em11{padding-left:11em;}
+.em12{padding-left:12em;}
+.em13{padding-left:13em;}
+.em14{padding-left:14em;}
+.em15{padding-left:15em;}
+.em16{padding-left:16em;}
