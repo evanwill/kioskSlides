@@ -1,10 +1,14 @@
 # kioskSlides
 
-> simple, offline, html + js slideshow for display computer
+> simple, offline, html + js slideshow for display computer, that prints poems
 
 Very basic slide show to replace PP on a display computer. HTML + JS allows interactive features in the slides.
 
-I attached an old receipt printer to the display computer to allow visitors to print poems from the slideshow. 
+To promote our daily poetry website and have some fun, I attached an old receipt printer to the display computer to allow visitors to print poems. Adding print functionality is fairly easy using Chrome kiosk mode.  
+
+Here are some pictures of the printer, https://twitter.com/VandalPoem/status/694261911685181441
+
+Mentioned in the student newspaper, https://www.uiargonaut.com/2016/02/25/the-poems-of-our-lives-the-vandal-poem-of-the-day-program-works-to-expose-students-to-wide-variety-of-poetry/
 
 ## Set Up Chrome Kiosk Mode
 
