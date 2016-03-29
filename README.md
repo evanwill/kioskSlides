@@ -4,11 +4,15 @@
 
 Very basic slide show to replace PP on a display computer. HTML + JS allows interactive features in the slides.
 
-To promote our daily poetry website and have some fun, I attached an old receipt printer to the display computer to allow visitors to print poems. Adding print functionality is fairly easy using Chrome kiosk mode.  
+To promote our daily poetry website and have some fun, I attached an old receipt printer to our lobby display computer to allow visitors to print poems. Rather than a self playing PP slide deck, the slide show is a set of HTML pages controlled by JS. Adding print functionality is fairly easy using Chrome kiosk mode and the standard drivers for the POS printer. A mouse is connected to the computer to allow visitors to interact with the slideshow. Right click is disabled and a keyboard is not connected to ensure security.    
+
+The slideshow is controlled by advance.js. The order of slides is given in the `slides` varible. Functions are provided to advance the slide after a set time or after mouse activity has stopped. 
 
 Here are some pictures of the printer, https://twitter.com/VandalPoem/status/694261911685181441
 
 Mentioned in the student newspaper, https://www.uiargonaut.com/2016/02/25/the-poems-of-our-lives-the-vandal-poem-of-the-day-program-works-to-expose-students-to-wide-variety-of-poetry/
+
+Mentioned in Vandal Poem of the Day Labs, http://poetry.lib.uidaho.edu/index.php/labs/
 
 ## Set Up Chrome Kiosk Mode
 
