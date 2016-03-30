@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html oncontextmenu='return false;'>
 <head>
+	<!-- slide template that emulates the live Vandal Poem of the Day website, http://poetry.lib.uidaho.edu/ offline. It is set to print the poem if the mouse is clicked. The poems are not included here for copyright reasons.  -->
+	
 	<meta charset="UTF-8">
 	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 		<title>Vandal Poem of the Day</title>
 
 		<link rel="stylesheet" type="text/css" href="styles/fonts.css" >
-		<!-- had issues with media queries in CSS not printing correctly, works with two seporate css and media query here -->
+		<!-- had issues with media queries in CSS not printing correctly. It works correctly with two seporate css files and a media query here -->
 		<link rel="stylesheet" type="text/css" href="styles/poemStyle.css" >
 		<link rel="stylesheet" type="text/css" media="print" href="styles/print.css" >
-		<link rel="stylesheet" href="styles/font-awesome-4.5.0/css/font-awesome.min.css">
-
+		<!-- added a font-awesome printer icon, not included in this respository:
+		<link rel="stylesheet" href="styles/font-awesome-4.5.0/css/font-awesome.min.css"> 
+		-->
 		<script src="js/advance.js"></script>		
 		<!-- activeWait() resets advance timer if mouse is moved to allow visitors to read the poem display -->
 		<script>
@@ -26,20 +29,16 @@
 <body onclick="window.print()">
 
 	<div class="noprint" id="qrCode">
-		<img src="images/vbotClickPrint2.png" class="noprint" style="width:300px;">
-		<div id="printIcon"><i class="fa fa-print"></i></div>
+		<img src="images/vbotClickPrint.png" class="noprint" style="width:300px;">
+		<!-- font-awesome printer icon: <div id="printIcon"><i class="fa fa-print"></i></div> -->
 	</div>
 
 	<div class="noprint" id="header">
 		<img src="images/vpodLogo.png">
 
-		<!-- little script to add the date -->
+		<!-- place to add the date -->
 		<p id="date1"></p>
-		<script src="js/strftime-min.js"></script>
-		<script>
-		var d = strftime('%B %d, %Y');
-		document.getElementById("date1").innerHTML = d;
-		</script>
+
 	</div>
 
 	<div id="box">
@@ -47,14 +46,25 @@
 
 			<!-- all the poetry content goes in here, each poem in a div of class "allPoems" with ID of its assigned date.  All are display: none; except for the current day, revealed by js below -->
 
-			<div class="allPoems" id="yyyy-mm-dd">
+			<div class="allPoems" id="2016-3-29">
 
 			<h2 id="title">Title</h2>
 			<p class="line"><em>by <a href="authorProfile">author</a></em></p>
 			<p></p>
 			<p></p>
 			<p class="line">lines</p>
-			<p class="line bookinfo">from <em><a target="_blank" href="">Book</a></em></p><p class="citation">Copyright<br/>Used with the permission of The Permissions Company, Inc.<br/>on behalf of <a href="">Publisher</a>.</p>
+			<p class="line bookinfo">from <em><a target="_blank" href="">Book Title </a></em></p><p class="citation">Copyright<br/>Used with the permission of The Permissions Company, Inc.<br/>on behalf of <a href="">Publisher</a>.</p>
+
+			</div>
+			
+			<div class="allPoems" id="2016-3-30">
+
+			<h2 id="title">Title 2</h2>
+			<p class="line"><em>by <a href="authorProfile">author 2</a></em></p>
+			<p></p>
+			<p></p>
+			<p class="line">more lines</p>
+			<p class="line bookinfo">from <em><a target="_blank" href="">Book Title </a></em></p><p class="citation">Copyright<br/>Used with the permission of The Permissions Company, Inc.<br/>on behalf of <a href="">Publisher</a>.</p>
 
 			</div>
 
@@ -68,10 +78,16 @@
 	</div>
 
 	<script>
-		var currentTime = new Date()
-		var today = currentTime.getFullYear() + "-" + (currentTime.getMonth() + 1)  + "-" + currentTime.getDate()
+		// get the date 
+		var currentTime = new Date();
+		// select poem of the day based on date which is in the div id yyyy-mm-dd 
+		var poemToday = currentTime.getFullYear() + "-" + (currentTime.getMonth() + 1)  + "-" + currentTime.getDate();
 
-		document.getElementById(today).style.display="block";
+		document.getElementById(poemToday).style.display="block";
+		
+		// add date to the page header
+		var today = currentTime.toLocaleString("en-us", { month: "long" }) + " " + currentTime.getDate() + ", " + currentTime.getFullYear();
+		document.getElementById("date1").innerHTML = today;
 	</script>
 
 </body>
