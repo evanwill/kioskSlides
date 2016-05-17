@@ -4,7 +4,8 @@
 var slides = [ 
     "fullSlide.html",
     "poem.html",
-    "photoSlide.html"    
+    "photoSlide.html",
+    "randompoem.html"
     ];
 
 // get current slide
