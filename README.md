@@ -16,7 +16,7 @@ Mentioned in Vandal Poem of the Day Labs, http://poetry.lib.uidaho.edu/index.php
 
 ## Example
 
-This respository contains an example implementation with three slide templates. The `poem.html` slide displays the daily poem and allows it to be printed. The `fullSlide.html` and `photoSlide.html` templates are simple ways to display images, usually exported from traditional PP slide decks. The files contain extensive comments to explain usage. 
+This respository contains an example implementation with three slide templates. The `poem.html` slide displays the daily poem and allows it to be printed (or `randompoem.html` displays a random poem to read/print). The `fullSlide.html` and `photoSlide.html` templates are simple ways to display images, usually exported from traditional PP slide decks. The files contain extensive comments to explain usage. 
 
 The slideshow is controlled by `advance.js`. The order of slides is given in the `slides` varible. Functions are provided to advance the slide after a set time or after mouse activity has stopped. 
 
