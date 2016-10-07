@@ -81,21 +81,24 @@
 
 		/* add date to the page header */
 		var currentTime = new Date();
-		var displayDay = currentTime.toLocaleString("en-us", { month: "long" }) + " " + currentTime.getDate() + ", " + currentTime.getFullYear();
-		document.getElementById("date1").innerHTML = displayDay;
 
 		/* make the poem of the day visible, or if there is no current poem, choose a random one. 
 		get the date, put it in the format matching the div ID yyyy-m-d */
-		var today = currentTime.getFullYear() + "-" + (currentTime.getMonth() + 1)  + "-" + currentTime.getDate();
-		var poem = document.getElementById(today);
+		var todayID = currentTime.getFullYear() + "-" + (currentTime.getMonth() + 1)  + "-" + currentTime.getDate();
+		var poem = document.getElementById(todayID);
 		/* if a poem doesnt exist for the day, select a random one, else, show todays poem */
 		if (!poem){
 			var poemsList = document.getElementsByClassName("allPoems");
 			var random = Math.floor(Math.random()*poemsList.length);
 			poemsList[random].style.display="block";
+            var vpodDay = new Date(poemsList[random].id);
+            var displayDay = "VPOD: " + vpodDay.toLocaleString("en-us", { month: "long" }) + " " + vpodDay.getDate() + ", " + vpodDay.getFullYear();
+            document.getElementById("date1").innerHTML = displayDay;			
 		}
 		else { 
 			poem.style.display="block"; 
+			var displayDay = currentTime.toLocaleString("en-us", { month: "long" }) + " " + currentTime.getDate() + ", " + currentTime.getFullYear();
+			document.getElementById("date1").innerHTML = displayDay;
 		}
 		
 	</script>
