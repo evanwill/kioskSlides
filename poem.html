@@ -78,16 +78,26 @@
 	</div>
 
 	<script>
-		// get the date 
-		var currentTime = new Date();
-		// select poem of the day based on date which is in the div id yyyy-mm-dd 
-		var poemToday = currentTime.getFullYear() + "-" + (currentTime.getMonth() + 1)  + "-" + currentTime.getDate();
 
-		document.getElementById(poemToday).style.display="block";
+		/* add date to the page header */
+		var currentTime = new Date();
+		var displayDay = currentTime.toLocaleString("en-us", { month: "long" }) + " " + currentTime.getDate() + ", " + currentTime.getFullYear();
+		document.getElementById("date1").innerHTML = displayDay;
+
+		/* make the poem of the day visible, or if there is no current poem, choose a random one. 
+		get the date, put it in the format matching the div ID yyyy-m-d */
+		var today = currentTime.getFullYear() + "-" + (currentTime.getMonth() + 1)  + "-" + currentTime.getDate();
+		var poem = document.getElementById(today);
+		/* if a poem doesnt exist for the day, select a random one, else, show todays poem */
+		if (!poem){
+			var poemsList = document.getElementsByClassName("allPoems");
+			var random = Math.floor(Math.random()*poemsList.length);
+			poemsList[random].style.display="block";
+		}
+		else { 
+			poem.style.display="block"; 
+		}
 		
-		// add date to the page header
-		var today = currentTime.toLocaleString("en-us", { month: "long" }) + " " + currentTime.getDate() + ", " + currentTime.getFullYear();
-		document.getElementById("date1").innerHTML = today;
 	</script>
 
 </body>
