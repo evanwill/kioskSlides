@@ -2,9 +2,9 @@
 
 > simple, offline, html + js slideshow for display computer, that prints poems
 
-Very basic slide show to replace PP on a display computer. HTML + JS allows interactive features in the slides.
+Very basic slide show to replace PP on a display computer. HTML + JS allows interactive features in the slides including printing. 
 
-To promote our daily poetry website and have some fun, I attached an old POS receipt printer to our lobby display computer, allowing visitors to print poems. Rather than a looping PP slide deck, the kioskSlides is a set of HTML pages controlled by JS and run in Chrome kiosk mode. Adding print functionality is fairly easy using the standard drivers for the POS printer and Chrome's built in print function. A mouse is connected to the computer to allow visitors to interact with the slideshow. Right click is disabled and a keyboard is not connected to ensure security.    
+To promote our daily poetry website and have some fun, I attached an old POS receipt printer to our lobby display computer, allowing visitors to print poems. Rather than a looping PP slide deck, the kioskSlides is a set of HTML pages controlled by JS and run in Chrome kiosk mode offline. Adding print functionality is fairly easy using the standard drivers for the POS printer and Chrome's built in print function. A mouse is connected to the computer to allow visitors to interact with the slideshow. Right click is disabled and a keyboard is not connected to ensure simple security.    
 
 ## Mentions 
 
@@ -14,9 +14,11 @@ Mentioned in the student newspaper, https://www.uiargonaut.com/2016/02/25/the-po
 
 Mentioned in Vandal Poem of the Day Labs, http://poetry.lib.uidaho.edu/index.php/labs/
 
+![kiosk printer](kioskSlides.JPG)
+
 ## Example
 
-This respository contains an example implementation with three slide templates. The `poem.html` slide displays the daily poem and allows it to be printed (or `randompoem.html` displays a random poem to read/print). The `fullSlide.html` and `photoSlide.html` templates are simple ways to display images, usually exported from traditional PP slide decks. The files contain extensive comments to explain usage. 
+This respository contains an example implementation with three slide templates. The `poem.html` slide displays the daily poem or a random poem if their is no poem of the day and allows it to be printed (`randompoem.html` displays a random poem to read/print). The `fullSlide.html` and `photoSlide.html` templates are simple ways to display images, usually exported from traditional PP slide decks. The files contain extensive comments to explain usage. 
 
 The slideshow is controlled by `advance.js`. The order of slides is given in the `slides` varible. Functions are provided to advance the slide after a set time or after mouse activity has stopped. 
 
