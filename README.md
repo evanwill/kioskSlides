@@ -2,7 +2,9 @@
 
 > simple, offline, html + js slideshow for display computer, that prints poems
 
-Very basic slide show to replace PP on a display computer. HTML + JS allows interactive features in the slides including printing. 
+Very basic slide show to replace PP on a display computer. HTML + JS allows interactive features in the slides including printing. KioskSlides uses an old, offline computer with only Chrome installed and an old POS receipt printer to create a interactive display.
+
+## Background 
 
 To promote our daily poetry website and have some fun, I attached an old POS receipt printer to our lobby display computer, allowing visitors to print poems. Rather than a looping PP slide deck, the kioskSlides is a set of HTML pages controlled by JS and run in Chrome kiosk mode offline. Adding print functionality is fairly easy using the standard drivers for the POS printer and Chrome's built in print function. A mouse is connected to the computer to allow visitors to interact with the slideshow. Right click is disabled and a keyboard is not connected to ensure simple security.    
 
