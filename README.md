@@ -2,7 +2,7 @@
 
 > simple, offline, html + js slideshow for display computer, that prints poems
 
-Very basic slide show to replace PP on a display computer. HTML + JS allows interactive features in the slides including printing. KioskSlides uses an old, offline computer with only Chrome installed and an old POS receipt printer to create a interactive display.
+Very basic slide show to replace PP on a display computer. HTML + JS allows interactive features in the slides including printing. KioskSlides uses an old, offline computer with only Chrome browser installed and an old POS receipt printer to create a interactive display.
 
 ## Background 
 
@@ -29,13 +29,13 @@ The slideshow is controlled by `advance.js`. The order of slides is given in the
 After putting together the kioskSlides files, Chrome browser must be set up in kiosk mode on the display computer to run the slideshow. 
 
 1. Set up printing defaults: 
-..* set default printer to receipt
+..* set default printer to the POS receipt printer
 ..* under more settings uncheck Headers and footers
 2. Create a new Kiosk user and shortcut
 ..* settings > users > add new user > create shortcut for this user > create
 3. Edit the shortcut to add flags enabling kiosk mode and printing without a message 
 ..* edit > properties > target
-..* target should = `chrome.exe --kiosk --kiosk-printing http://[start URL here] --disable-print-preview`
+..* target should = `chrome.exe --kiosk --kiosk-printing [start URL here] --disable-print-preview`(in this case the start URL will be a file location like `C:\kioskSlides\poem.html`)
 4. Completely shut down Chrome (in task manager) or restart computer.
 
 Start the slideshow by clicking on the shortcut.
